@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.sql.SQLException;
+
 @Controller
 public class SchoolController {
 
@@ -17,7 +19,7 @@ public class SchoolController {
                              @RequestParam String name,
                              @RequestParam Long capacity,
                              @RequestParam String country
-    ) {
+    ) throws SQLException {
         model.addAttribute("school", repository.save(name, capacity, country));
 
         return "school_get";
