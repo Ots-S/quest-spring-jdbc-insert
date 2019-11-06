@@ -19,7 +19,7 @@ public class SchoolController {
                              @RequestParam String name,
                              @RequestParam Long capacity,
                              @RequestParam String country
-    ) throws SQLException {
+    ) {
         model.addAttribute("school", repository.save(name, capacity, country));
 
         return "school_get";
