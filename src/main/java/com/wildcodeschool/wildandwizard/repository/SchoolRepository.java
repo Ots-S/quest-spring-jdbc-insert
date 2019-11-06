@@ -11,7 +11,7 @@ public class SchoolRepository {
     private final static String DB_USER = "h4rryp0tt3r";
     private final static String DB_PASSWORD = "Horcrux4life!";
 
-    public School save(String name, Long capacity, String country) throws SQLException {
+    public School save(String name, Long capacity, String country){
 
         // TODO : insert a new school in database
 
